@@ -1,0 +1,16 @@
+name: Call Gosec Scan Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  call-gosec:
+    uses: scriptkidakash81/ci-templates/.github/workflows/gosec.yml@main
+    with:
+      branch: ${{ github.ref }}
+      
