@@ -1,0 +1,11 @@
+include:
+  - project: 'scriptkidakash81/ci-templates'
+    file: '/gosec-pipeline.yml'
+
+stages:
+  - test
+
+gosec:
+  stage: test
+  script:
+    - gosec -fmt=json ./... > gosec-results.json
