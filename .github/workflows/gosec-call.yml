@@ -10,7 +10,7 @@ on:
 
 jobs:
   call-gosec:
-    uses: scriptkidakash81/ci-templates/.github/workflows/gosec.yml@main
+    uses: scriptkidakash81/ci-templates-gosec/.github/workflows/gosec.yml@main
     with:
-      branch: ${{ github.ref }}
+      branch: main
       
