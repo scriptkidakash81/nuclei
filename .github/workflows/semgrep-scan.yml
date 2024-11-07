@@ -1,0 +1,22 @@
+name: "Semgrep Scan"
+# Run workflow each time code is pushed to your repository
+on:
+  push:
+  
+jobs:
+  tests:
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Set up python
+        uses: actions/checkout@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Semgrep
+        run: pip install semgrep
+
+      - name: Run semgrep
+        run: semgrep --config auto
